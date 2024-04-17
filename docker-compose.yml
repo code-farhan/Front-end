@@ -1,0 +1,12 @@
+version: '3.0'
+
+services:
+  frontend:
+    build: .
+    command: "npm run build"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./src:/home/node/app/src
+    ports:
+      - 3000:3000
